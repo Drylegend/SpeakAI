@@ -29,7 +29,7 @@ const Controller = () => {
           formData.append("file", blob, "myFile.wav");
   
           // send form data to api endpoint
-          //put your ip address
+          //put your ip address or use local host
           await axios
             .post("http://your-ip-address:8000/post-audio", formData, {
               headers: {
