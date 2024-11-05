@@ -81,11 +81,12 @@ aws s3 mb s3://your-bucket-name
 ## Install Boto3 for AWS Transcribe:
 
 ```cmd
-pip 
+pip install boto3
+
 ```
 
 
-### Create Environment Variables
+### 5. Create Environment Variables
 
 Create your .env file
 
