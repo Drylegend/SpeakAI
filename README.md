@@ -43,7 +43,7 @@ Install required Python packages
 ```
 pip install google-generativeai python-decouple fastapi "uvicorn[standard]" python-multipart
 ```
-# 1. Install AWS CLI
+# Install AWS CLI
 Download and install AWS CLI:
 
 ### powershell
@@ -55,7 +55,7 @@ cmd
 ```
 aws --version
 ```
-# 2. Configure AWS CLI
+# Configure AWS CLI
 Configure AWS CLI:
 
 ```cmd
@@ -71,13 +71,13 @@ Default region name (e.g., us-east-1)
 
 Default output format (e.g., json)
 
-### 3. Create an S3 Bucket
+### Create an S3 Bucket
 ## Create an S3 bucket using AWS CLI:
 
 ```cmd
 aws s3 mb s3://your-bucket-name
 ```
-### 4. Use AWS Transcribe
+### Use AWS Transcribe
 ## Install Boto3 for AWS Transcribe:
 
 ```cmd
@@ -86,15 +86,15 @@ pip install boto3
 ```
 
 
-### 5. Create Environment Variables
+### Create Environment Variables
 
-Create your .env file
+## Create your .env file
 
 ```shell
 touch .env
 ```
 
-Update your .env file with the following. You can see your .env by typing sudo nano .env or just by clicking on the file if you are in VS Code.
+## Update your .env file with the following. You can see your .env by typing sudo nano .env or just by clicking on the file if you are in VS Code.
 
 ```plain
 ELEVEN_LABS_API_KEY=enter-you-key-here
@@ -139,7 +139,15 @@ Install packages
 ```shell
 yarn --exact
 ```
+## Install tailwind CSS
+```
+npx tailwindcss init -p
+```
 
+## start with
+```
+yarn create vith .
+```
 Build application
 
 ```shell
@@ -164,7 +172,28 @@ or alternatively in live mode:
 yarn start
 ```
 
-You can check your live server is working by going to:
+### To run backend server
+
+# 1. Enter in your environment
+# 2. use uvicorn to startup
+```
+uvicorn main:app --reload
+```
+## If your CORS is not working properly use this 
+```
+uvicorn main:app  --reload --host 0.0.0.0 --port 8000
+```
+### Put you IP address in the frontend
+```
+"http://your-ip-address:8000/post-audio"
+```
+
+
+
+
+
+
+
 
 ```plain
 http://localhost:4173/health
